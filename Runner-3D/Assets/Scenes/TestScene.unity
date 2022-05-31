@@ -20,25 +20,25 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
-  m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
-  m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
+  m_AmbientSkyColor: {r: 2, g: 2, b: 2, a: 1}
+  m_AmbientEquatorColor: {r: 0.3207547, g: 0.3207547, b: 0.3207547, a: 1}
+  m_AmbientGroundColor: {r: 0.13207549, g: 0, b: 0.11845324, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 1
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
-  m_HaloStrength: 0.5
-  m_FlareStrength: 1
-  m_FlareFadeSpeed: 3
+  m_HaloStrength: 0
+  m_FlareStrength: 0.512
+  m_FlareFadeSpeed: 2.98
   m_HaloTexture: {fileID: 0}
   m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
-  m_DefaultReflectionMode: 0
+  m_DefaultReflectionMode: 1
   m_DefaultReflectionResolution: 128
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
-  m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.4440221, g: 0.49316514, b: 0.5722316, a: 1}
+  m_Sun: {fileID: 0}
+  m_IndirectSpecularColor: {r: 0.37089851, g: 0.3783701, b: 0.3572253, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 4df42a8aaa1d8524db5e574d55e79b24, type: 2}
   m_LightingSettings: {fileID: 2072132865}
 --- !u!196 &4
 NavMeshSettings:
@@ -149,7 +149,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 216393189}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.88, y: 0, z: 0}
+  m_LocalPosition: {x: 1.88, y: 0.19, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -185,21 +185,24 @@ MonoBehaviour:
     _bezierPath:
       points:
       - {x: -2, y: 0, z: 0}
-      - {x: -1.913329, y: 0.043335527, z: 0}
-      - {x: -1.9973644, y: -0.024465874, z: 2.720476}
-      - {x: -2, y: 0, z: 3.6569037}
-      - {x: -2.0040796, y: 0.03787057, z: 5.106395}
-      - {x: -2.042381, y: 0.16528255, z: 8.946559}
-      - {x: -2, y: 0.15244392, z: 11.149567}
-      - {x: -1.9635707, y: 0.14140828, z: 13.043195}
-      - {x: -1.6731844, y: 0.10250759, z: 16.669489}
-      - {x: -3.032302, y: 0.06356323, z: 18.989716}
-      - {x: -4.17135, y: 0.030924771, z: 20.934248}
-      - {x: -6.845612, y: -0.0040982114, z: 21.76373}
-      - {x: -8.154698, y: 0, z: 21.8}
-      - {x: -10.378388, y: 0.0069614598, z: 21.86161}
-      - {x: -17.02638, y: -0.12551562, z: 21.8}
-      - {x: -16.775349, y: 0, z: 21.8}
+      - {x: -1.8598182, y: 0.0700909, z: 0}
+      - {x: -2, y: 0, z: 3.284153}
+      - {x: -2, y: 0, z: 4.3773994}
+      - {x: -2, y: 0, z: 6.6642084}
+      - {x: -2, y: 0, z: 10.39389}
+      - {x: -2, y: 0, z: 13.642315}
+      - {x: -2, y: 0, z: 15.85569}
+      - {x: -2.1307747, y: 0.16547436, z: 17.7596}
+      - {x: -3.5289655, y: 0.12570572, z: 19.770538}
+      - {x: -3.8408198, y: 0.11683567, z: 20.21906}
+      - {x: -4.7648435, y: 0.06462986, z: 21.078247}
+      - {x: -5.9196177, y: 0.015697127, z: 21.462124}
+      - {x: -6.9816623, y: -0.029306272, z: 21.815174}
+      - {x: -8.242119, y: -0.12803319, z: 21.827414}
+      - {x: -8.789251, y: -0.08236628, z: 21.888971}
+      - {x: -9.776076, y: 0, z: 22}
+      - {x: -16.45546, y: 0, z: 22}
+      - {x: -17.639315, y: -0.080209315, z: 21.91044}
       isClosed: 0
       space: 0
       controlMode: 0
@@ -215,17 +218,18 @@ MonoBehaviour:
       - 0
       - 0
       - 0
-      globalNormalsAngle: 60
+      - 0
+      globalNormalsAngle: 65
       flipNormals: 0
     vertexPathUpToDate: 1
-    vertexPathMaxAngleError: 1.8
+    vertexPathMaxAngleError: 0.3
     vertexPathMinVertexSpacing: 0.01
     showTransformTool: 1
     showPathBounds: 0
     showPerSegmentBounds: 0
     displayAnchorPoints: 1
     displayControlPoints: 1
-    bezierHandleScale: 5.46
+    bezierHandleScale: 4.95
     globalDisplaySettingsFoldout: 0
     keepConstantHandleSize: 0
     showNormalsInVertexMode: 0
@@ -236,7 +240,7 @@ MonoBehaviour:
     showVertexPathOptions: 1
     showNormals: 1
     showNormalsHelpInfo: 0
-    tabIndex: 1
+    tabIndex: 0
   initialized: 1
 --- !u!43 &218302163
 Mesh:
@@ -1887,7 +1891,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 705507995}
-  - component: {fileID: 705507994}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -1895,68 +1898,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!108 &705507994
-Light:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 705507993}
-  m_Enabled: 1
-  serializedVersion: 10
-  m_Type: 1
-  m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
-  m_Range: 10
-  m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 2
-    m_Resolution: -1
-    m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
-    m_CullingMatrixOverride:
-      e00: 1
-      e01: 0
-      e02: 0
-      e03: 0
-      e10: 0
-      e11: 1
-      e12: 0
-      e13: 0
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-    m_UseCullingMatrixOverride: 0
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingLayerMask: 1
-  m_Lightmapping: 1
-  m_LightShadowCasterMode: 0
-  m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
-  m_UseBoundingSphereOverride: 0
-  m_UseViewFrustumForShadowCasterCull: 1
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
 --- !u!4 &705507995
 Transform:
   m_ObjectHideFlags: 0
@@ -2009,7 +1950,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.31132078, g: 0.31132078, b: 0.31132078, a: 0}
+  m_BackGroundColor: {r: 0.4811321, g: 0, b: 0.47900856, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -3401,7 +3342,7 @@ LightingSettings:
   m_Name: 
   serializedVersion: 4
   m_GIWorkflowMode: 1
-  m_EnableBakedLightmaps: 1
+  m_EnableBakedLightmaps: 0
   m_EnableRealtimeLightmaps: 0
   m_RealtimeEnvironmentLighting: 1
   m_BounceScale: 1
@@ -3484,7 +3425,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4330457867550939796, guid: 8d19446ca899d2847a5c049c2f771048, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 4330457867550939796, guid: 8d19446ca899d2847a5c049c2f771048, type: 3}
       propertyPath: m_LocalPosition.z
