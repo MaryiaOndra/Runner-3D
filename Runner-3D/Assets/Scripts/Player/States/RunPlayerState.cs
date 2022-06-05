@@ -1,4 +1,5 @@
 ﻿using System;
+using Platform;
 using UnityEngine;
 
 namespace Player.States
@@ -18,15 +19,23 @@ namespace Player.States
 
         public void UpdateState()
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyUp(KeyCode.Mouse0))
             {
-                OnSwitchState(State.Fall);
+                OnSwitchState(State.Idle);
             }
         }
 
         public void OnCollisionState(Collision collision)
         {
-            //throw new System.NotImplementedException();
+            if (collision.gameObject.TryGetComponent(typeof(Obstacle) , out _))
+            {
+                Debug.Log("RUN: Obstacle hit!!");
+                OnSwitchState(State.Fall);
+            }
+            else if (collision.gameObject.TryGetComponent<Finish>(out _))
+            {
+                OnSwitchState(State.Win);
+            }
         }
     }
 }

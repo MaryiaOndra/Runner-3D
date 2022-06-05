@@ -1,4 +1,5 @@
 ﻿using System;
+using Platform;
 using UnityEngine;
 
 namespace Player.States
@@ -18,15 +19,11 @@ namespace Player.States
 
         public void UpdateState()
         {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                OnSwitchState(State.Idle);
-            }
         }
 
         public void OnCollisionState(Collision collision)
         {
-            //throw new System.NotImplementedException();
+
         }
     }
 }

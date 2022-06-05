@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using UnityEngine;
 
 namespace Player.States
@@ -14,19 +15,24 @@ namespace Player.States
         public void EnterState(PlayerStateController stateController)
         {
             _stateController = stateController;
+            _stateController.StartCoroutine(FallEffect());
+        }
+
+        private IEnumerator FallEffect()
+        {
+            Debug.Log("FALL!!!");
+            _stateController.Rigidbody.AddForce(Vector3.right, ForceMode.Impulse);
+            _stateController.Ragdoll.TurnOnRagdoll();
+            yield return new WaitForSeconds(3f);
+            Debug.Log("Return To  safe point");
         }
 
         public void UpdateState()
         {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                OnSwitchState(State.Win);
-            }
         }
 
         public void OnCollisionState(Collision collision)
         {
-            throw new System.NotImplementedException();
         }
     }
 }

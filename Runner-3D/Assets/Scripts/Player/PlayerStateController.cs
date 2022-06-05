@@ -6,16 +6,30 @@ using UnityEngine;
 
 namespace Player
 {
+    [RequireComponent(typeof(Rigidbody))]
+    [RequireComponent(typeof(PlayerAnimatorController))]
     public class PlayerStateController : MonoBehaviour
     {
+        private PlayerAnimatorController _animatorController;
         private IPlayerStateBehaviour _currentState;
         private List<IPlayerStateBehaviour> _allStates = new List<IPlayerStateBehaviour>();
+        private RagdollController _ragdollController;
+        private Rigidbody _rigidbody;
+        
+        public PlayerAnimatorController AnimatorController => _animatorController;
+        public Rigidbody Rigidbody => _rigidbody;
+        public RagdollController Ragdoll => _ragdollController;
 
         private void Start()
         {
+            _rigidbody = GetComponent<Rigidbody>();
+            _animatorController = GetComponent<PlayerAnimatorController>();
+            
             CreateStates();
             InitStates();
             SwitchState(State.Idle);
+            _ragdollController = new RagdollController(this);
+            _ragdollController.SetRagdollParts();
         }
 
         private void CreateStates()
@@ -24,10 +38,14 @@ namespace Player
             RunPlayerState runPlayerState = new RunPlayerState();
             FallPlayerState fallPlayerState = new FallPlayerState();
             WinPlayerState winPlayerState = new WinPlayerState();
-            _allStates.Add(idlePlayerState);
-            _allStates.Add(runPlayerState);
-            _allStates.Add(fallPlayerState);
-            _allStates.Add(winPlayerState);
+            
+            _allStates = new List<IPlayerStateBehaviour>
+            {
+                idlePlayerState,
+                runPlayerState,
+                fallPlayerState,
+                winPlayerState
+            };
         }
 
         private void InitStates()
